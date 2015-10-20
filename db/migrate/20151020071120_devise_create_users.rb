@@ -47,10 +47,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
   end
 
   def add_confirmable_columns(_table_definition)
-    # table_definition.string   :confirmation_token
-    # table_definition.datetime :confirmed_at
-    # table_definition.datetime :confirmation_sent_at
-    # table_definition.string   :unconfirmed_email # Only if using reconfirmable
+    table_definition.string   :confirmation_token
+    table_definition.datetime :confirmed_at
+    table_definition.datetime :confirmation_sent_at
+    table_definition.string   :unconfirmed_email # Only if using reconfirmable
   end
 
   def add_lockable_columns(_table_definition)
